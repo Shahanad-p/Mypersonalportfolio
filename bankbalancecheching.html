@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .one{
+            padding: 100px;
+        }
+        h1:hover{
+            color: brown;
+        }
+        div{
+            border: solid;
+            border-radius: 50px;
+            margin: 100px 100px 50px 50px;
+        }
+        div:hover{
+            background-color: antiquewhite;
+                
+        }    
+
+    </style>
+   
+
+<center>
+    <div class="one">
+    <h1>Bank Balance Checking</h1>
+    <input class="number1" id="dep">
+    <button id="a">Deposite</button>
+    <br><br>
+    <input class="number2" id="wid" >
+    <button id="b">Withdraw</button>
+    <br><br>
+    <button onclick="bank()">Check Balance</button> 
+    <p id="demo"></p>
+    <div>
+</center>
+
+  
+    <script>
+        function bank(){
+        var a=Number(document.getElementById("dep").value)
+        var b=Number(document.getElementById("wid").value)
+        var c=a-b;
+        console.log(b)
+        console.log(c)
+         if(c<=0){
+
+        alert("You don't have sufficient balance");
+         }else{
+        document.getElementById("demo").innerHTML="₹&nbsp"+ c +"/-"
+          
+          }     
+            
+        }
+    </script>
+    
+</body>
+</html>
+
+
